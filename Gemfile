@@ -13,8 +13,10 @@ gem "stimulus-rails",  "1.2.1"
 gem "jbuilder",        "2.11.5"
 gem "puma",            "5.6.8"
 gem "bootsnap",        "1.16.0", require: false
-
+gem "faker",           "2.21.0"
 gem "bcrypt",          "3.1.18"
+gem "will_paginate",           "3.3.1"
+gem "bootstrap-will_paginate", "1.0.0"
 
 group :development, :test do
   gem "sqlite3", "1.6.1"
