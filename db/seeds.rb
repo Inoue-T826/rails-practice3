@@ -3,6 +3,8 @@ User.find_or_create_by!(email: "example@railstutorial.org", name: "Example User"
     user.password = "foobar"
     user.password_confirmation = "foobar"
     user.admin = true
+    user.activated = true
+    user.activated_at = Time.zone.now
   end
 
 # 追加のユーザーをまとめて生成する
@@ -14,5 +16,7 @@ User.find_or_create_by!(email: "example@railstutorial.org", name: "Example User"
     user.name = name
     user.password = password
     user.password_confirmation = password
+    user.activated = true
+    user.activated_at = Time.zone.now
   end
 end

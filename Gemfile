@@ -18,6 +18,7 @@ gem "bcrypt",          "3.1.18"
 gem "will_paginate",           "3.3.1"
 gem "bootstrap-will_paginate", "1.0.0"
 
+
 group :development, :test do
   gem "sqlite3", "1.6.1"
   gem "debug",   "1.7.1", platforms: %i[ mri mingw x64_mingw ]
