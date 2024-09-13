@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+ // 以下にSCSSファイルをインポートします。
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "custom";  // custom.scss を読み込む

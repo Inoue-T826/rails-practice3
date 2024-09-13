@@ -5,7 +5,7 @@ User.find_or_create_by!(email: "example@railstutorial.org", name: "Example User"
     user.admin = true
     user.activated = true
     user.activated_at = Time.zone.now
-  end
+end
 
 # 追加のユーザーをまとめて生成する
 99.times do |n|
@@ -19,4 +19,13 @@ User.find_or_create_by!(email: "example@railstutorial.org", name: "Example User"
     user.activated = true
     user.activated_at = Time.zone.now
   end
+end
+
+  # ユーザーの一部を対象にマイクロポストを生成する
+users = User.order(:created_at).take(6)
+users.each do |user|
+ 50.times do
+  content = Faker::Lorem.sentence(word_count: 5)
+  user.microposts.find_or_create_by!(content: content)
+ end
 end

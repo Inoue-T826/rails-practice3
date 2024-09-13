@@ -17,6 +17,8 @@ gem "faker",           "2.21.0"
 gem "bcrypt",          "3.1.18"
 gem "will_paginate",           "3.3.1"
 gem "bootstrap-will_paginate", "1.0.0"
+gem "active_storage_validations", "0.9.8"
+gem "image_processing",           "1.12.2"
 
 
 group :development, :test do
@@ -44,6 +46,7 @@ end
 
 group :production do
   gem "pg", "1.3.5"
+  gem "aws-sdk-s3", "1.114.0", require: false
 end
 
 # Windows ではタイムゾーン情報用の tzinfo-data gem を含める必要があります
