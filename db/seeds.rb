@@ -29,3 +29,17 @@ users.each do |user|
   user.microposts.find_or_create_by!(content: content)
  end
 end
+
+# ユーザーフォローのリレーションシップを作成する
+users = User.all
+user  = users.first
+following = users[2..50]
+followers = users[3..40]
+# ユーザーが既にフォロー関係を持っていない場合のみ作成する
+following.each do |followed|
+  user.active_relationships.find_or_create_by!(followed_id: followed.id)
+end
+followers.each do |follower|
+  follower.active_relationships.find_or_create_by!(followed_id: user.id)
+end
+
